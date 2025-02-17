@@ -30,7 +30,7 @@ public class SensorClient
                     int bytesRead = stream.Read(buffer, 0, buffer.Length);
                     string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     
-                    Console.WriteLine($"==================== {input}: {response}");
+                    Console.WriteLine($"%%%%%%%%%%%%%%%%%% {input}: {response}");
                     Console.Write("ENTER COMMAND-> ");
                 }
             }

@@ -49,7 +49,8 @@ public class SensorServer
     {
         // Generate a unique ID for the client for logging purposes
         string clientId = Guid.NewGuid().ToString();
-        Log($"Client connected: {clientId}");
+        Log($"Client connected: {clientId}\n");
+        Console.Write("Available commands: \nGET_TEMP - Get temperature reading \nGET_STATUS - Get system status \nGET_PRESSURE - Get pressure reading\n\n");
         Console.Write("ENTER COMMAND -> ");
 
 
@@ -101,7 +102,7 @@ public class SensorServer
             "GET_TEMP" => $"{new Random().Next(200, 300) / 10.0}°C", // Return a random temperature
             "GET_STATUS" => new Random().Next(2) == 0 ? "ACTIVE" : "INACTIVE", // Return random status
             "GET_PRESSURE" => $"{new Random().Next(900, 1100)} hPa", // Return random pressure
-            _ => "ERROR: Unknown command" // Default response for unknown commands
+            _ => "ERROR: Unknown command",
         };
     }
 

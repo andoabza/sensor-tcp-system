@@ -25,28 +25,40 @@ A simple TCP-based client-server system for simulating sensor data communication
 
 ```
 Connected to server. Enter commands (GET_TEMP, GET_STATUS, GET_PRESSURE)
-[22:52:48] Server started. Waiting for connections...
-[22:52:48] Client connected: d5919793-0bed-4014-b735-f9e1b6e39b6e
-ENTER COMMAND -> GET_TEMP
-[22:52:59] Received from d5919793-0bed-4014-b735-f9e1b6e39b6e: GET_TEMP
-[22:52:59] Sent response to d5919793-0bed-4014-b735-f9e1b6e39b6e:
+[23:26:50] Server started. Waiting for connections...
+[23:26:50] Client connected: 90be7aa6-243b-4be2-a5fe-060fbccf6458
 
-==================== GET_TEMP: 29°C
+Available commands:
+GET_TEMP - Get temperature reading
+GET_STATUS - Get system status
+GET_PRESSURE - Get pressure reading
+
+ENTER COMMAND -> GET_TEMP
+[23:26:57] Received from 90be7aa6-243b-4be2-a5fe-060fbccf6458: GET_TEMP
+[23:26:57] Sent response to 90be7aa6-243b-4be2-a5fe-060fbccf6458:
+
+%%%%%%%%%%%%%%%%%% GET_TEMP: 25.5°C
 
 ENTER COMMAND-> GET_STATUS
-[22:53:10] Received from d5919793-0bed-4014-b735-f9e1b6e39b6e: GET_STATUS
-[22:53:10] Sent response to d5919793-0bed-4014-b735-f9e1b6e39b6e:
+[23:27:04] Received from 90be7aa6-243b-4be2-a5fe-060fbccf6458: GET_STATUS
+[23:27:04] Sent response to 90be7aa6-243b-4be2-a5fe-060fbccf6458:
 
-==================== GET_STATUS: ACTIVE
+%%%%%%%%%%%%%%%%%% GET_STATUS: ACTIVE
 
 ENTER COMMAND-> GET_PRESSURE
-[22:53:27] Received from d5919793-0bed-4014-b735-f9e1b6e39b6e: GET_PRESSURE
-[22:53:27] Sent response to d5919793-0bed-4014-b735-f9e1b6e39b6e:
+[23:27:11] Received from 90be7aa6-243b-4be2-a5fe-060fbccf6458: GET_PRESSURE
+[23:27:11] Sent response to 90be7aa6-243b-4be2-a5fe-060fbccf6458:
 
-==================== GET_PRESSURE: 1073 hPa
+%%%%%%%%%%%%%%%%%% GET_PRESSURE: 948 hPa
+
+ENTER COMMAND-> GET_NO
+[23:27:22] Received from 90be7aa6-243b-4be2-a5fe-060fbccf6458: GET_NO
+[23:27:22] Sent response to 90be7aa6-243b-4be2-a5fe-060fbccf6458:
+
+%%%%%%%%%%%%%%%%%% GET_NO: ERROR: Unknown command
 
 ENTER COMMAND->
 Press ENTER to stop server...
-[22:53:41] Client disconnected: d5919793-0bed-4014-b735-f9e1b6e39b6e
+[23:27:25] Client disconnected: 90be7aa6-243b-4be2-a5fe-060fbccf6458
 
-[22:53:46] Exiting...
+[23:27:28] Exiting...
